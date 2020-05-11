@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Activity 1: Basic HTML Bio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flask Plotlyjs Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
 
-  <h1>Jonathan Nguyen</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>SELECT Sample:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sample MetaData</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="pie"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bubble"></div>
+    </div>
+  </div>
 
-  <img src="https://placehod.it/200x200" alt="Jonathan Nguyen">
-  <p>Hello!  My name is Jonathan, and I am 30 years old.  I currently work at Kaiser Permanente as a Systems Administrator specializing in Epic.</p>
-  <p>I consider myself to be a big introvert.  I enjoy rock climbing and watching movies.  I also like to play short indie games whenever I find the time.</p>
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-  <ul>
-    <li><strong>Email:</strong> <a href="#">jonnguyen116@gmail.com</a></li>
-    <li><strong>Github:</strong> <a href="#">jonnguyen116</a></li>
-    <li><strong>Twitter:</strong> <a href="#">ur mom</a></li>
-  </ul>
-  <table>
-    <tr>
-      <th>Books</th>
-      <th>Movies</th>
-      <th>Games</th>
-    </tr>
-    <tr>
-      <td>As I Lay Dying</td>
-      <td>Taxi Driver</td>
-      <td>Hyper Light Drifter</td>
-    </tr>
-    <tr>
-      <td>Never Let Me Go</td>
-      <td>Eternal Sunshine of the Spotless Mind</td>
-      <td>Megaman X</td>
-    </tr>
-    <tr>
-      <td>Blood Meridian</td>
-      <td>Before Midnight</td>
-      <td>Gunstar Heroes</td>
-    </tr>
-  </table>
-  <!-- Bonus link to last class page -->
-  <a href="../../../../1/Activities/04-Stu_MyFirst_HTML/Solved/my-first-bonus.html">My First HTML Bonus</a>
-</body>
-</html>
 </body>
 
 </html>
